@@ -51,14 +51,14 @@ public class Parking {
 			}
 		}
 		catch (NoSuchElementException e) {
-			System.out.println("Нет свободных мест в паркинге");
+			System.out.println("РќРµС‚ СЃРІРѕР±РѕРґРЅС‹С… РјРµСЃС‚ РІ РїР°СЂРєРёРЅРіРµ");
 		}
 	}
 	synchronized public static void unpark(int N) {
 		try	{
 			Ticket t = used_tickets.get(N);
 			if (t==null)
-				throw new IndexOutOfBoundsException("Парковочного билета с номером " + N + " не существует!");
+				throw new IndexOutOfBoundsException("РџР°СЂРєРѕРІРѕС‡РЅРѕРіРѕ Р±РёР»РµС‚Р° СЃ РЅРѕРјРµСЂРѕРј " + N + " РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
 			else {				
 				t.setCar(null);
 				used_tickets.remove(N);
